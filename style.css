@@ -6,7 +6,7 @@
 body {
 	font-family: Helvetica,Arial,sans-serif;
 	background-color: salmon;
-	padding:100px 200px;
+	padding:100px;
 }
 
 /*		Characters
@@ -21,39 +21,48 @@ body {
 }
 
 .character {
+	position: relative;
 	min-height: 300px;
-	min-width: 150px;
-	background-color: lightgoldenrodyellow;
+	min-width: 200px;
 	filter: saturate(0);
 	transition: all 420ms;
+	background-position: bottom center;
+	background-repeat: no-repeat;
 }
 .character:hover {
 	transform: scale(1.5);
 	filter: saturate(100%);
+	z-index:5;
 }
 
 
 
 /*		Specific Characters
 =================================================
+		Sprites from: 2dwillneverdie.com
 =================================================
 */
 .designer {
-	background-color: teal;
+	background-size: 58%;
+	background-image:  url("images/placeholder_designer_Mary.gif");
 }
 
 .ui-ux {
-	background-color: aquamarine;
+	background-size: 45%;
+	background-image: url("images/placeholder_UIUX_vanessa.png");
 }
 
 .front-end {
-	background-color: gold;
+	background-image: url("images/placeholder_frontend_shiki2.png");
+	background-size: 83%;
 }
 
 .back-end {
-	background-color: peru;
+	background-image: url("images/placeholder_backend.gif");
+	background-size: 96%;
 }
 
 .writer {
-	background-color: goldenrod;
+	background-size: 50%;
+	background-image: url("images/placeholder_writer_kiwi.png");
 }
