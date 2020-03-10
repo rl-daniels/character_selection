@@ -13,8 +13,10 @@ body {
 =================================================
 =================================================
 */
+h1 {
+	margin-bottom: 200px;
+}
 .characters {
-	margin-top: 100px;
 	outline: 2px solid black;
 	display: flex;		flex-wrap: nowrap;
 	justify-content: space-between;
@@ -29,10 +31,20 @@ body {
 	background-position: bottom center;
 	background-repeat: no-repeat;
 }
+.character .info {
+	transform: scale(0.5);
+	transition: all 2s;
+	opacity: 0;
+	position: absolute;
+	top: -100px;
+}
 .character:hover {
 	transform: scale(1.5);
 	filter: saturate(100%);
 	z-index:5;
+}
+.character:hover .info {
+	opacity: 1;
 }
 
 
@@ -46,23 +58,58 @@ body {
 	background-size: 58%;
 	background-image:  url("images/placeholder_designer_Mary.gif");
 }
-
+.designer .info {
+	left: -36%;
+}
 .ui-ux {
 	background-size: 45%;
 	background-image: url("images/placeholder_UIUX_vanessa.png");
 }
-
+.ui-ux .info {
+	left: -25%;
+}
 .front-end {
 	background-image: url("images/placeholder_frontend_shiki2.png");
 	background-size: 83%;
 }
-
+.front-end .info {
+	left: -33%;
+}
 .back-end {
 	background-image: url("images/placeholder_backend.gif");
 	background-size: 96%;
 }
-
+.back-end .info {
+	left: -38%;
+}
 .writer {
 	background-size: 50%;
 	background-image: url("images/placeholder_writer_kiwi.png");
 }
+.writer .info {
+	left: -28%;
+}
+
+/*		Character Stats (INFO)
+=================================================
+=================================================
+*/
+.info {
+	outline: 1px solid black;
+	padding: 20px;
+	width: 300px;
+}
+.stats {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-gap: 5px;
+}
+.stats dd {
+	margin: 0;
+	background-color: yellowgreen;
+}
+.one 	{ width: 10%; }
+.two 	{ width: 30%; }
+.three 	{ width: 45%; }
+.four 	{ width: 75%; }
+.five 	{ width: 95%; }
